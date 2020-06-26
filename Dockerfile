@@ -10,6 +10,6 @@ RUN git clone https://github.com/microsoft/vcpkg.git && \
   mkdir -p downloads
 COPY darknet-cache /vcpkg/downloads/
 RUN cd vcpkg && \
-  ./vcpkg install darknet[opencv-base,weights] --triplet x64-linux --clean-after-build && \
+  ./vcpkg install darknet[opencv-base,weights,weights-train] --triplet x64-linux --clean-after-build && \
   rm -rf ports && \
   rm -f vcpkg
